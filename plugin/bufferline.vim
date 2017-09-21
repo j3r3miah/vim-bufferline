@@ -13,6 +13,7 @@ call s:check_defined('g:bufferline_active_buffer_left', '[')
 call s:check_defined('g:bufferline_active_buffer_right', ']')
 call s:check_defined('g:bufferline_separator', ' ')
 call s:check_defined('g:bufferline_modified', '+')
+call s:check_defined('g:bufferline_unmodified', ' ')
 call s:check_defined('g:bufferline_echo', 1)
 call s:check_defined('g:bufferline_show_bufnr', 1)
 call s:check_defined('g:bufferline_fname_mod', ':t')
@@ -51,7 +52,7 @@ function! bufferline#get_status_string()
         \ '%#'.g:bufferline_inactive_highlight.'#'
         \.'%{g:bufferline_status_info.before}'
         \.'%#'.g:bufferline_active_highlight.'#'
-        \.' %{g:bufferline_status_info.current} '
+        \.'%{g:bufferline_status_info.current}'
         \.'%#'.g:bufferline_inactive_highlight.'#'
         \.'%{g:bufferline_status_info.after}'
 endfunction
